@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DigimonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(['firebase.auth'])->group(function () {
-    Route::apiResource('digimons', 'App\Http\Controllers\DigimonController');
+    Route::apiResource('digimons', DigimonController::class);
 });
