@@ -27,14 +27,18 @@ Para obtener más información sobre la autenticación con Firebase, consulta la
     ```bash
     git clone https://github.com/angtdiaz/digimon-back.git
     ```
+2. Dirígete al repositorio
 
-2. Instala las dependencias con Composer:
+   ```bash
+   cd digimon-back
+   ```
+3. Instala las dependencias con Composer:
 
     ```bash
     composer install
     ```
 
-3. Configura las variables de entorno en el archivo `.env`. Especialmente las relacionadas a firebase.
+4. Configura las variables de entorno en el archivo `.env`. Especialmente las relacionadas a firebase.
 
 ## Ejecución
 
