@@ -47,7 +47,8 @@ php artisan serve
 
 ## API
 
-Ya en producción esta es la API: [https://digimon-back-kk45rljnwq-uc.a.run.app](https://digimon-back-kk45rljnwq-uc.a.run.app)
+Ya en producción esta es la API: [https://digimon-back-kk45rljnwq-uc.a.run.app](https://digimon-back-kk45rljnwq-uc.a.run.app).
+
 Recuerda que debes tener un Bearer Token válido para poder consumirla.
 
 
