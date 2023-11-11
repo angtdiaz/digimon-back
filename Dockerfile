@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . /app
 RUN composer update
 
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 EXPOSE 8080
 COPY --from=build /app /var/www/
