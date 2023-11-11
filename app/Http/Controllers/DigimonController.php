@@ -17,14 +17,18 @@ class DigimonController extends Controller
 
     public function index(Request $request)
     {
-        $page = $request->input('page', 1);
+        $page = $request->input('page', 0);
         $pageSize = 20;
+        $name = $request->input('name', '');
 
-        $digimonData = $this->getDigimonList($page, $pageSize);
-        //convertir los datos en un DigimonDTO
-        $digimonDTOs = collect($digimonData->items())->map(function ($item) {
-            return new DigimonDTO($item);
-        });
+        $digimonData = $this->getDigimonList($page, $pageSize, $name);
+        $digimonDTOs = [];
+        if (count($digimonData) > 0) {
+            //convertir los datos en un DigimonDTO
+            $digimonDTOs = collect($digimonData->items())->map(function ($item) {
+                return new DigimonDTO($item);
+            });
+        }
         //convertir los datos en un DigimonResourceCollection
         $formattedData = new DigimonResourceCollection($digimonDTOs);
 
